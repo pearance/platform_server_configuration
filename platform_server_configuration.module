@@ -1,0 +1,3 @@
+<?php
+
+include_once('platform_server_configuration.features.inc');
