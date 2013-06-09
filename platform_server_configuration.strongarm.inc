@@ -38,7 +38,7 @@ function platform_server_configuration_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'hosting_alias_subdomain';
-  $strongarm->value = 'oearance.com';
+  $strongarm->value = 'pearance.com';
   $export['hosting_alias_subdomain'] = $strongarm;
 
   $strongarm = new stdClass;
@@ -79,6 +79,57 @@ function platform_server_configuration_strongarm() {
   $strongarm->name = 'hosting_backup_queue_default_interval';
   $strongarm->value = '86400';
   $export['hosting_backup_queue_default_interval'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hosting_client_mail_welcome_body';
+  $strongarm->value = '!username,
+
+Thank you for registering at !site. You may now log in to !login_uri using the following username and password:
+
+username: !username
+password: !password
+
+You may also log in by clicking on this link or copying and pasting it in your browser:
+
+!login_url
+
+This is a one-time login, so it can be used only once.
+
+After logging in, you will be redirected to !edit_uri so you can change your password.
+
+
+--  !site team';
+  $export['hosting_client_mail_welcome_body'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hosting_client_mail_welcome_subject';
+  $strongarm->value = 'Account details for !username at !site';
+  $export['hosting_client_mail_welcome_subject'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hosting_client_prefix';
+  $strongarm->value = '';
+  $export['hosting_client_prefix'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hosting_client_register_user';
+  $strongarm->value = 1;
+  $export['hosting_client_register_user'] = $strongarm;
+
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'hosting_client_send_welcome';
+  $strongarm->value = 0;
+  $export['hosting_client_send_welcome'] = $strongarm;
 
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
